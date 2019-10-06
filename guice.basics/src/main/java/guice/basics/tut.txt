@@ -1,0 +1,18 @@
+Guice is an Open source framework for the JAVA Platform. and it supports dependency injection.
+Dependency Injection supports the Inversion of control principle that the object should be injected rather than being created.
+The object must be passed as the parameter to the class or function.
+
+Injector is used to provide the instance of an interface i.e the classes implemented by the interfaces.
+Now the interface can be implemented by many classes. So to specify which class should be used , the GUICe has abstract module class
+i.e AbstractModule.class which have the abstract class configure method in which we have to bind the interface with the class.
+
+How Guice builds object .?
+
+When Type A is requested (either through Injector.createInstance or through requesting Type B which has dependency on type A)
+ it does two things :-
+
+1.) Consults binding to resolve the concrete type i.e through AppModule - configure method and bind function.
+2.) Build Object of that type.
+
+-> Now if Type A is an interface then we must have binding like in AppModule.class. 
+-> If Type A is a base class then we can bind like the subClass i.e child class. Useful in Factory Pattern.
