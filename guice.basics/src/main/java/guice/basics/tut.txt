@@ -22,3 +22,13 @@ How to inject Constant Dependencies.?
 it in the appModule. Hence bind(String.class).toInstance("Red") is used in this case.
 
 Here the problem is , If we are having multiple constructors with the same definition then we have to use the Annotations.
+
+How To create Annotations
+-> create an annotation with @annotation and just passed it before the parameter in the constructor.
+	While creating the annotation dont forget to give the @BindingAnnotation.
+	Then just bind it in the AppModule , and bind it with .AnnotatedWith() 
+	e.g - bind(String.class).annotatedWith(ColorValue.class).toInstance("Yellow");
+
+OBJECT GRAPH - It is the flow of how the dependencies are injected .
+
+THere is something called MEthod Injection which is very similar to the Constructor Injection
