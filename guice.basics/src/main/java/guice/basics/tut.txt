@@ -16,3 +16,9 @@ When Type A is requested (either through Injector.createInstance or through requ
 
 -> Now if Type A is an interface then we must have binding like in AppModule.class. 
 -> If Type A is a base class then we can bind like the subClass i.e child class. Useful in Factory Pattern.
+
+How to inject Constant Dependencies.?
+-> If we are having any private data members to be used in a class. then it can be injected directly through the constructor and binding
+it in the appModule. Hence bind(String.class).toInstance("Red") is used in this case.
+
+Here the problem is , If we are having multiple constructors with the same definition then we have to use the Annotations.
